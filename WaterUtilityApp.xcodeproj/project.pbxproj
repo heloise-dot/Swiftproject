@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		090FD3D82EF3C813004D3441 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3CA2EF3C813004D3441 /* PrimaryButton.swift */; };
+		090FD3D92EF3C813004D3441 /* StatusCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3CD2EF3C813004D3441 /* StatusCard.swift */; };
+		090FD3DA2EF3C813004D3441 /* StatusBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3CC2EF3C813004D3441 /* StatusBadge.swift */; };
+		090FD3DB2EF3C813004D3441 /* InfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3C92EF3C813004D3441 /* InfoCard.swift */; };
+		090FD3DC2EF3C813004D3441 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3CB2EF3C813004D3441 /* SectionHeader.swift */; };
+		090FD3DD2EF3C813004D3441 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3D02EF3C813004D3441 /* RootView.swift */; };
+		090FD3DE2EF3C813004D3441 /* AnimatedToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3C82EF3C813004D3441 /* AnimatedToggle.swift */; };
+		090FD3DF2EF3C813004D3441 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3CF2EF3C813004D3441 /* AppRouter.swift */; };
+		090FD4102EF3C820004D3441 /* SystemOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3EE2EF3C820004D3441 /* SystemOverviewView.swift */; };
+		090FD4112EF3C820004D3441 /* RoleSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F62EF3C820004D3441 /* RoleSelectionView.swift */; };
+		090FD4122EF3C820004D3441 /* EditAreaStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E82EF3C820004D3441 /* EditAreaStatusView.swift */; };
+		090FD4132EF3C820004D3441 /* DailyUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FE2EF3C820004D3441 /* DailyUsageView.swift */; };
+		090FD4142EF3C820004D3441 /* AreaStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F82EF3C820004D3441 /* AreaStatusView.swift */; };
+		090FD4152EF3C820004D3441 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F32EF3C820004D3441 /* ForgotPasswordView.swift */; };
+		090FD4162EF3C820004D3441 /* WaterTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD40C2EF3C820004D3441 /* WaterTipsView.swift */; };
+		090FD4172EF3C820004D3441 /* AdminSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E42EF3C820004D3441 /* AdminSettingsView.swift */; };
+		090FD4182EF3C820004D3441 /* CustomerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FD2EF3C820004D3441 /* CustomerTabView.swift */; };
+		090FD4192EF3C820004D3441 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F52EF3C820004D3441 /* RegisterView.swift */; };
+		090FD41A2EF3C820004D3441 /* OutageHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3EA2EF3C820004D3441 /* OutageHistoryView.swift */; };
+		090FD41B2EF3C820004D3441 /* CustomerMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FB2EF3C820004D3441 /* CustomerMainView.swift */; };
+		090FD41C2EF3C820004D3441 /* TankLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3EF2EF3C820004D3441 /* TankLevelView.swift */; };
+		090FD41E2EF3C820004D3441 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4072EF3C820004D3441 /* SettingsView.swift */; };
+		090FD41F2EF3C820004D3441 /* HelpCenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4002EF3C820004D3441 /* HelpCenterView.swift */; };
+		090FD4202EF3C820004D3441 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FF2EF3C820004D3441 /* EditProfileView.swift */; };
+		090FD4212EF3C820004D3441 /* AdminDashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E12EF3C820004D3441 /* AdminDashboardView.swift */; };
+		090FD4222EF3C820004D3441 /* OutageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4042EF3C820004D3441 /* OutageDetailView.swift */; };
+		090FD4232EF3C820004D3441 /* TipDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4082EF3C820004D3441 /* TipDetailView.swift */; };
+		090FD4252EF3C820004D3441 /* WeeklyUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD40D2EF3C820004D3441 /* WeeklyUsageView.swift */; };
+		090FD4262EF3C820004D3441 /* OutageManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3EB2EF3C820004D3441 /* OutageManagementView.swift */; };
+		090FD4272EF3C820004D3441 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4032EF3C820004D3441 /* NotificationsView.swift */; };
+		090FD4282EF3C820004D3441 /* ActiveOutagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E02EF3C820004D3441 /* ActiveOutagesView.swift */; };
+		090FD4292EF3C820004D3441 /* AdminProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E32EF3C820004D3441 /* AdminProfileView.swift */; };
+		090FD42A2EF3C820004D3441 /* WaterAvailabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD40B2EF3C820004D3441 /* WaterAvailabilityView.swift */; };
+		090FD42B2EF3C820004D3441 /* NotificationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4022EF3C820004D3441 /* NotificationDetailView.swift */; };
+		090FD42C2EF3C820004D3441 /* CreateOutageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E72EF3C820004D3441 /* CreateOutageView.swift */; };
+		090FD42D2EF3C820004D3441 /* OutageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4052EF3C820004D3441 /* OutageListView.swift */; };
+		090FD42E2EF3C820004D3441 /* WaterSourceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F12EF3C820004D3441 /* WaterSourceListView.swift */; };
+		090FD42F2EF3C820004D3441 /* PumpControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3EC2EF3C820004D3441 /* PumpControlView.swift */; };
+		090FD4302EF3C820004D3441 /* AdminMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E22EF3C820004D3441 /* AdminMainView.swift */; };
+		090FD4312EF3C820004D3441 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F42EF3C820004D3441 /* LoginView.swift */; };
+		090FD4322EF3C820004D3441 /* UsageOverviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4092EF3C820004D3441 /* UsageOverviewView.swift */; };
+		090FD4332EF3C820004D3441 /* MonthlyUsageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4012EF3C820004D3441 /* MonthlyUsageView.swift */; };
+		090FD4342EF3C820004D3441 /* SendNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3ED2EF3C820004D3441 /* SendNotificationView.swift */; };
+		090FD4352EF3C820004D3441 /* CustomerProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FC2EF3C820004D3441 /* CustomerProfileView.swift */; };
+		090FD4362EF3C820004D3441 /* AreaManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E62EF3C820004D3441 /* AreaManagementView.swift */; };
+		090FD4372EF3C820004D3441 /* WaterSourceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F02EF3C820004D3441 /* WaterSourceDetailView.swift */; };
+		090FD4382EF3C820004D3441 /* AdminTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E52EF3C820004D3441 /* AdminTabView.swift */; };
+		090FD4392EF3C820004D3441 /* ContactSupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3F92EF3C820004D3441 /* ContactSupportView.swift */; };
+		090FD43A2EF3C820004D3441 /* CustomerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3FA2EF3C820004D3441 /* CustomerHomeView.swift */; };
+		090FD43B2EF3C820004D3441 /* NotificationHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD3E92EF3C820004D3441 /* NotificationHistoryView.swift */; };
+		090FD4422EF3C834004D3441 /* NotificationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD43D2EF3C834004D3441 /* NotificationItem.swift */; };
+		090FD4432EF3C834004D3441 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD43F2EF3C834004D3441 /* User.swift */; };
+		090FD4442EF3C834004D3441 /* Area.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD43C2EF3C834004D3441 /* Area.swift */; };
+		090FD4452EF3C834004D3441 /* WaterSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD4402EF3C834004D3441 /* WaterSource.swift */; };
+		090FD4462EF3C834004D3441 /* Outage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090FD43E2EF3C834004D3441 /* Outage.swift */; };
+		090FD45D2EF3CB19004D3441 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090FD45C2EF3CB19004D3441 /* Preview Assets.xcassets */; };
+		0921F48B2EF3CE0C00D7C88A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0921F48A2EF3CE0C00D7C88A /* Assets.xcassets */; };
+		0921F4902EF3D16000D7C88A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0921F48F2EF3D15800D7C88A /* Colors.swift */; };
+		0921F4922EF3D91900D7C88A /* WaterUtilityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0921F4912EF3D7C300D7C88A /* WaterUtilityApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09C2AF392EF2B05B0079FBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C2AF202EF2B05A0079FBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09C2AF272EF2B05A0079FBFD;
+			remoteInfo = WaterUtilityApp;
+		};
+		09C2AF432EF2B05B0079FBFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09C2AF202EF2B05A0079FBFD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09C2AF272EF2B05A0079FBFD;
+			remoteInfo = WaterUtilityApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		090FD3C82EF3C813004D3441 /* AnimatedToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedToggle.swift; sourceTree = "<group>"; };
+		090FD3C92EF3C813004D3441 /* InfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCard.swift; sourceTree = "<group>"; };
+		090FD3CA2EF3C813004D3441 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		090FD3CB2EF3C813004D3441 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		090FD3CC2EF3C813004D3441 /* StatusBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBadge.swift; sourceTree = "<group>"; };
+		090FD3CD2EF3C813004D3441 /* StatusCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusCard.swift; sourceTree = "<group>"; };
+		090FD3CF2EF3C813004D3441 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		090FD3D02EF3C813004D3441 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		090FD3E02EF3C820004D3441 /* ActiveOutagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOutagesView.swift; sourceTree = "<group>"; };
+		090FD3E12EF3C820004D3441 /* AdminDashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminDashboardView.swift; sourceTree = "<group>"; };
+		090FD3E22EF3C820004D3441 /* AdminMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMainView.swift; sourceTree = "<group>"; };
+		090FD3E32EF3C820004D3441 /* AdminProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileView.swift; sourceTree = "<group>"; };
+		090FD3E42EF3C820004D3441 /* AdminSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminSettingsView.swift; sourceTree = "<group>"; };
+		090FD3E52EF3C820004D3441 /* AdminTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabView.swift; sourceTree = "<group>"; };
+		090FD3E62EF3C820004D3441 /* AreaManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaManagementView.swift; sourceTree = "<group>"; };
+		090FD3E72EF3C820004D3441 /* CreateOutageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateOutageView.swift; sourceTree = "<group>"; };
+		090FD3E82EF3C820004D3441 /* EditAreaStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAreaStatusView.swift; sourceTree = "<group>"; };
+		090FD3E92EF3C820004D3441 /* NotificationHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHistoryView.swift; sourceTree = "<group>"; };
+		090FD3EA2EF3C820004D3441 /* OutageHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutageHistoryView.swift; sourceTree = "<group>"; };
+		090FD3EB2EF3C820004D3441 /* OutageManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutageManagementView.swift; sourceTree = "<group>"; };
+		090FD3EC2EF3C820004D3441 /* PumpControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpControlView.swift; sourceTree = "<group>"; };
+		090FD3ED2EF3C820004D3441 /* SendNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNotificationView.swift; sourceTree = "<group>"; };
+		090FD3EE2EF3C820004D3441 /* SystemOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemOverviewView.swift; sourceTree = "<group>"; };
+		090FD3EF2EF3C820004D3441 /* TankLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TankLevelView.swift; sourceTree = "<group>"; };
+		090FD3F02EF3C820004D3441 /* WaterSourceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSourceDetailView.swift; sourceTree = "<group>"; };
+		090FD3F12EF3C820004D3441 /* WaterSourceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSourceListView.swift; sourceTree = "<group>"; };
+		090FD3F32EF3C820004D3441 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		090FD3F42EF3C820004D3441 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		090FD3F52EF3C820004D3441 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		090FD3F62EF3C820004D3441 /* RoleSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectionView.swift; sourceTree = "<group>"; };
+		090FD3F82EF3C820004D3441 /* AreaStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaStatusView.swift; sourceTree = "<group>"; };
+		090FD3F92EF3C820004D3441 /* ContactSupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupportView.swift; sourceTree = "<group>"; };
+		090FD3FA2EF3C820004D3441 /* CustomerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeView.swift; sourceTree = "<group>"; };
+		090FD3FB2EF3C820004D3441 /* CustomerMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerMainView.swift; sourceTree = "<group>"; };
+		090FD3FC2EF3C820004D3441 /* CustomerProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileView.swift; sourceTree = "<group>"; };
+		090FD3FD2EF3C820004D3441 /* CustomerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTabView.swift; sourceTree = "<group>"; };
+		090FD3FE2EF3C820004D3441 /* DailyUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyUsageView.swift; sourceTree = "<group>"; };
+		090FD3FF2EF3C820004D3441 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		090FD4002EF3C820004D3441 /* HelpCenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterView.swift; sourceTree = "<group>"; };
+		090FD4012EF3C820004D3441 /* MonthlyUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyUsageView.swift; sourceTree = "<group>"; };
+		090FD4022EF3C820004D3441 /* NotificationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDetailView.swift; sourceTree = "<group>"; };
+		090FD4032EF3C820004D3441 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		090FD4042EF3C820004D3441 /* OutageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutageDetailView.swift; sourceTree = "<group>"; };
+		090FD4052EF3C820004D3441 /* OutageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutageListView.swift; sourceTree = "<group>"; };
+		090FD4072EF3C820004D3441 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		090FD4082EF3C820004D3441 /* TipDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDetailView.swift; sourceTree = "<group>"; };
+		090FD4092EF3C820004D3441 /* UsageOverviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageOverviewView.swift; sourceTree = "<group>"; };
+		090FD40B2EF3C820004D3441 /* WaterAvailabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAvailabilityView.swift; sourceTree = "<group>"; };
+		090FD40C2EF3C820004D3441 /* WaterTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterTipsView.swift; sourceTree = "<group>"; };
+		090FD40D2EF3C820004D3441 /* WeeklyUsageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyUsageView.swift; sourceTree = "<group>"; };
+		090FD43C2EF3C834004D3441 /* Area.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Area.swift; sourceTree = "<group>"; };
+		090FD43D2EF3C834004D3441 /* NotificationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationItem.swift; sourceTree = "<group>"; };
+		090FD43E2EF3C834004D3441 /* Outage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Outage.swift; sourceTree = "<group>"; };
+		090FD43F2EF3C834004D3441 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		090FD4402EF3C834004D3441 /* WaterSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterSource.swift; sourceTree = "<group>"; };
+		090FD45C2EF3CB19004D3441 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0921F48A2EF3CE0C00D7C88A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0921F48C2EF3D0EF00D7C88A /* WaterUtilityApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = WaterUtilityApp.xcodeproj; sourceTree = "<group>"; };
+		0921F48F2EF3D15800D7C88A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		0921F4912EF3D7C300D7C88A /* WaterUtilityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterUtilityApp.swift; sourceTree = "<group>"; };
+		09C2AF282EF2B05A0079FBFD /* WaterUtilityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterUtilityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C2AF382EF2B05B0079FBFD /* WaterUtilityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterUtilityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09C2AF422EF2B05B0079FBFD /* WaterUtilityAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterUtilityAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09C2AF252EF2B05A0079FBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF352EF2B05B0079FBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF3F2EF2B05B0079FBFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		090FD3CE2EF3C813004D3441 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3C82EF3C813004D3441 /* AnimatedToggle.swift */,
+				090FD3C92EF3C813004D3441 /* InfoCard.swift */,
+				090FD3CA2EF3C813004D3441 /* PrimaryButton.swift */,
+				090FD3CB2EF3C813004D3441 /* SectionHeader.swift */,
+				090FD3CC2EF3C813004D3441 /* StatusBadge.swift */,
+				090FD3CD2EF3C813004D3441 /* StatusCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		090FD3D12EF3C813004D3441 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3CF2EF3C813004D3441 /* AppRouter.swift */,
+				090FD3D02EF3C813004D3441 /* RootView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		090FD3D52EF3C813004D3441 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0921F48F2EF3D15800D7C88A /* Colors.swift */,
+				090FD3CE2EF3C813004D3441 /* Components */,
+				090FD3D12EF3C813004D3441 /* Navigation */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		090FD3F22EF3C820004D3441 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3E02EF3C820004D3441 /* ActiveOutagesView.swift */,
+				090FD3E12EF3C820004D3441 /* AdminDashboardView.swift */,
+				090FD3E22EF3C820004D3441 /* AdminMainView.swift */,
+				090FD3E32EF3C820004D3441 /* AdminProfileView.swift */,
+				090FD3E42EF3C820004D3441 /* AdminSettingsView.swift */,
+				090FD3E52EF3C820004D3441 /* AdminTabView.swift */,
+				090FD3E62EF3C820004D3441 /* AreaManagementView.swift */,
+				090FD3E72EF3C820004D3441 /* CreateOutageView.swift */,
+				090FD3E82EF3C820004D3441 /* EditAreaStatusView.swift */,
+				090FD3E92EF3C820004D3441 /* NotificationHistoryView.swift */,
+				090FD3EA2EF3C820004D3441 /* OutageHistoryView.swift */,
+				090FD3EB2EF3C820004D3441 /* OutageManagementView.swift */,
+				090FD3EC2EF3C820004D3441 /* PumpControlView.swift */,
+				090FD3ED2EF3C820004D3441 /* SendNotificationView.swift */,
+				090FD3EE2EF3C820004D3441 /* SystemOverviewView.swift */,
+				090FD3EF2EF3C820004D3441 /* TankLevelView.swift */,
+				090FD3F02EF3C820004D3441 /* WaterSourceDetailView.swift */,
+				090FD3F12EF3C820004D3441 /* WaterSourceListView.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		090FD3F72EF3C820004D3441 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3F32EF3C820004D3441 /* ForgotPasswordView.swift */,
+				090FD3F42EF3C820004D3441 /* LoginView.swift */,
+				090FD3F52EF3C820004D3441 /* RegisterView.swift */,
+				090FD3F62EF3C820004D3441 /* RoleSelectionView.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		090FD40E2EF3C820004D3441 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3F82EF3C820004D3441 /* AreaStatusView.swift */,
+				090FD3F92EF3C820004D3441 /* ContactSupportView.swift */,
+				090FD3FA2EF3C820004D3441 /* CustomerHomeView.swift */,
+				090FD3FB2EF3C820004D3441 /* CustomerMainView.swift */,
+				090FD3FC2EF3C820004D3441 /* CustomerProfileView.swift */,
+				090FD3FD2EF3C820004D3441 /* CustomerTabView.swift */,
+				090FD3FE2EF3C820004D3441 /* DailyUsageView.swift */,
+				090FD3FF2EF3C820004D3441 /* EditProfileView.swift */,
+				090FD4002EF3C820004D3441 /* HelpCenterView.swift */,
+				090FD4012EF3C820004D3441 /* MonthlyUsageView.swift */,
+				090FD4022EF3C820004D3441 /* NotificationDetailView.swift */,
+				090FD4032EF3C820004D3441 /* NotificationsView.swift */,
+				090FD4042EF3C820004D3441 /* OutageDetailView.swift */,
+				090FD4052EF3C820004D3441 /* OutageListView.swift */,
+				090FD4072EF3C820004D3441 /* SettingsView.swift */,
+				090FD4082EF3C820004D3441 /* TipDetailView.swift */,
+				090FD4092EF3C820004D3441 /* UsageOverviewView.swift */,
+				090FD40B2EF3C820004D3441 /* WaterAvailabilityView.swift */,
+				090FD40C2EF3C820004D3441 /* WaterTipsView.swift */,
+				090FD40D2EF3C820004D3441 /* WeeklyUsageView.swift */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		090FD40F2EF3C820004D3441 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				090FD3F22EF3C820004D3441 /* Admin */,
+				090FD3F72EF3C820004D3441 /* Auth */,
+				090FD40E2EF3C820004D3441 /* Customer */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		090FD4412EF3C834004D3441 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				090FD43C2EF3C834004D3441 /* Area.swift */,
+				090FD43E2EF3C834004D3441 /* Outage.swift */,
+				090FD43F2EF3C834004D3441 /* User.swift */,
+				090FD43D2EF3C834004D3441 /* NotificationItem.swift */,
+				090FD4402EF3C834004D3441 /* WaterSource.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		090FD45A2EF3CAC8004D3441 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				090FD45C2EF3CB19004D3441 /* Preview Assets.xcassets */,
+				0921F48A2EF3CE0C00D7C88A /* Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0921F48D2EF3D0EF00D7C88A /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09C2AF1F2EF2B05A0079FBFD = {
+			isa = PBXGroup;
+			children = (
+				0921F4912EF3D7C300D7C88A /* WaterUtilityApp.swift */,
+				0921F48C2EF3D0EF00D7C88A /* WaterUtilityApp.xcodeproj */,
+				090FD45A2EF3CAC8004D3441 /* Preview Content */,
+				090FD4412EF3C834004D3441 /* Models */,
+				090FD40F2EF3C820004D3441 /* Features */,
+				090FD3D52EF3C813004D3441 /* Core */,
+				09C2AF292EF2B05A0079FBFD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09C2AF292EF2B05A0079FBFD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09C2AF282EF2B05A0079FBFD /* WaterUtilityApp.app */,
+				09C2AF382EF2B05B0079FBFD /* WaterUtilityAppTests.xctest */,
+				09C2AF422EF2B05B0079FBFD /* WaterUtilityAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09C2AF272EF2B05A0079FBFD /* WaterUtilityApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C2AF4C2EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityApp" */;
+			buildPhases = (
+				09C2AF242EF2B05A0079FBFD /* Sources */,
+				09C2AF252EF2B05A0079FBFD /* Frameworks */,
+				09C2AF262EF2B05A0079FBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WaterUtilityApp;
+			packageProductDependencies = (
+			);
+			productName = WaterUtilityApp;
+			productReference = 09C2AF282EF2B05A0079FBFD /* WaterUtilityApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09C2AF372EF2B05B0079FBFD /* WaterUtilityAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C2AF4F2EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityAppTests" */;
+			buildPhases = (
+				09C2AF342EF2B05B0079FBFD /* Sources */,
+				09C2AF352EF2B05B0079FBFD /* Frameworks */,
+				09C2AF362EF2B05B0079FBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09C2AF3A2EF2B05B0079FBFD /* PBXTargetDependency */,
+			);
+			name = WaterUtilityAppTests;
+			packageProductDependencies = (
+			);
+			productName = WaterUtilityAppTests;
+			productReference = 09C2AF382EF2B05B0079FBFD /* WaterUtilityAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09C2AF412EF2B05B0079FBFD /* WaterUtilityAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09C2AF522EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityAppUITests" */;
+			buildPhases = (
+				09C2AF3E2EF2B05B0079FBFD /* Sources */,
+				09C2AF3F2EF2B05B0079FBFD /* Frameworks */,
+				09C2AF402EF2B05B0079FBFD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09C2AF442EF2B05B0079FBFD /* PBXTargetDependency */,
+			);
+			name = WaterUtilityAppUITests;
+			packageProductDependencies = (
+			);
+			productName = WaterUtilityAppUITests;
+			productReference = 09C2AF422EF2B05B0079FBFD /* WaterUtilityAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09C2AF202EF2B05A0079FBFD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					09C2AF272EF2B05A0079FBFD = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					09C2AF372EF2B05B0079FBFD = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 09C2AF272EF2B05A0079FBFD;
+					};
+					09C2AF412EF2B05B0079FBFD = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 09C2AF272EF2B05A0079FBFD;
+					};
+				};
+			};
+			buildConfigurationList = 09C2AF232EF2B05A0079FBFD /* Build configuration list for PBXProject "WaterUtilityApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09C2AF1F2EF2B05A0079FBFD;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 09C2AF292EF2B05A0079FBFD /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0921F48D2EF3D0EF00D7C88A /* Products */;
+					ProjectRef = 0921F48C2EF3D0EF00D7C88A /* WaterUtilityApp.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				09C2AF272EF2B05A0079FBFD /* WaterUtilityApp */,
+				09C2AF372EF2B05B0079FBFD /* WaterUtilityAppTests */,
+				09C2AF412EF2B05B0079FBFD /* WaterUtilityAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09C2AF262EF2B05A0079FBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0921F48B2EF3CE0C00D7C88A /* Assets.xcassets in Resources */,
+				090FD45D2EF3CB19004D3441 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF362EF2B05B0079FBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF402EF2B05B0079FBFD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09C2AF242EF2B05A0079FBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				090FD4102EF3C820004D3441 /* SystemOverviewView.swift in Sources */,
+				090FD4112EF3C820004D3441 /* RoleSelectionView.swift in Sources */,
+				090FD4122EF3C820004D3441 /* EditAreaStatusView.swift in Sources */,
+				090FD4132EF3C820004D3441 /* DailyUsageView.swift in Sources */,
+				090FD4142EF3C820004D3441 /* AreaStatusView.swift in Sources */,
+				090FD4152EF3C820004D3441 /* ForgotPasswordView.swift in Sources */,
+				090FD4162EF3C820004D3441 /* WaterTipsView.swift in Sources */,
+				090FD4172EF3C820004D3441 /* AdminSettingsView.swift in Sources */,
+				090FD4182EF3C820004D3441 /* CustomerTabView.swift in Sources */,
+				090FD4192EF3C820004D3441 /* RegisterView.swift in Sources */,
+				090FD41A2EF3C820004D3441 /* OutageHistoryView.swift in Sources */,
+				090FD41B2EF3C820004D3441 /* CustomerMainView.swift in Sources */,
+				090FD41C2EF3C820004D3441 /* TankLevelView.swift in Sources */,
+				090FD41E2EF3C820004D3441 /* SettingsView.swift in Sources */,
+				090FD41F2EF3C820004D3441 /* HelpCenterView.swift in Sources */,
+				090FD4202EF3C820004D3441 /* EditProfileView.swift in Sources */,
+				090FD4212EF3C820004D3441 /* AdminDashboardView.swift in Sources */,
+				0921F4902EF3D16000D7C88A /* Colors.swift in Sources */,
+				090FD4222EF3C820004D3441 /* OutageDetailView.swift in Sources */,
+				090FD4232EF3C820004D3441 /* TipDetailView.swift in Sources */,
+				090FD4252EF3C820004D3441 /* WeeklyUsageView.swift in Sources */,
+				090FD4262EF3C820004D3441 /* OutageManagementView.swift in Sources */,
+				090FD4272EF3C820004D3441 /* NotificationsView.swift in Sources */,
+				090FD4282EF3C820004D3441 /* ActiveOutagesView.swift in Sources */,
+				090FD4292EF3C820004D3441 /* AdminProfileView.swift in Sources */,
+				090FD42A2EF3C820004D3441 /* WaterAvailabilityView.swift in Sources */,
+				090FD42B2EF3C820004D3441 /* NotificationDetailView.swift in Sources */,
+				090FD42C2EF3C820004D3441 /* CreateOutageView.swift in Sources */,
+				090FD42D2EF3C820004D3441 /* OutageListView.swift in Sources */,
+				090FD42E2EF3C820004D3441 /* WaterSourceListView.swift in Sources */,
+				090FD42F2EF3C820004D3441 /* PumpControlView.swift in Sources */,
+				090FD4302EF3C820004D3441 /* AdminMainView.swift in Sources */,
+				090FD4312EF3C820004D3441 /* LoginView.swift in Sources */,
+				090FD4322EF3C820004D3441 /* UsageOverviewView.swift in Sources */,
+				090FD4332EF3C820004D3441 /* MonthlyUsageView.swift in Sources */,
+				090FD4342EF3C820004D3441 /* SendNotificationView.swift in Sources */,
+				090FD4422EF3C834004D3441 /* NotificationItem.swift in Sources */,
+				0921F4922EF3D91900D7C88A /* WaterUtilityApp.swift in Sources */,
+				090FD4432EF3C834004D3441 /* User.swift in Sources */,
+				090FD4442EF3C834004D3441 /* Area.swift in Sources */,
+				090FD4452EF3C834004D3441 /* WaterSource.swift in Sources */,
+				090FD4462EF3C834004D3441 /* Outage.swift in Sources */,
+				090FD4352EF3C820004D3441 /* CustomerProfileView.swift in Sources */,
+				090FD4362EF3C820004D3441 /* AreaManagementView.swift in Sources */,
+				090FD4372EF3C820004D3441 /* WaterSourceDetailView.swift in Sources */,
+				090FD4382EF3C820004D3441 /* AdminTabView.swift in Sources */,
+				090FD4392EF3C820004D3441 /* ContactSupportView.swift in Sources */,
+				090FD43A2EF3C820004D3441 /* CustomerHomeView.swift in Sources */,
+				090FD43B2EF3C820004D3441 /* NotificationHistoryView.swift in Sources */,
+				090FD3D82EF3C813004D3441 /* PrimaryButton.swift in Sources */,
+				090FD3D92EF3C813004D3441 /* StatusCard.swift in Sources */,
+				090FD3DA2EF3C813004D3441 /* StatusBadge.swift in Sources */,
+				090FD3DB2EF3C813004D3441 /* InfoCard.swift in Sources */,
+				090FD3DC2EF3C813004D3441 /* SectionHeader.swift in Sources */,
+				090FD3DD2EF3C813004D3441 /* RootView.swift in Sources */,
+				090FD3DE2EF3C813004D3441 /* AnimatedToggle.swift in Sources */,
+				090FD3DF2EF3C813004D3441 /* AppRouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF342EF2B05B0079FBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09C2AF3E2EF2B05B0079FBFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09C2AF3A2EF2B05B0079FBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09C2AF272EF2B05A0079FBFD /* WaterUtilityApp */;
+			targetProxy = 09C2AF392EF2B05B0079FBFD /* PBXContainerItemProxy */;
+		};
+		09C2AF442EF2B05B0079FBFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09C2AF272EF2B05A0079FBFD /* WaterUtilityApp */;
+			targetProxy = 09C2AF432EF2B05B0079FBFD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		09C2AF4A2EF2B05B0079FBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09C2AF4B2EF2B05B0079FBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		09C2AF4D2EF2B05B0079FBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		09C2AF4E2EF2B05B0079FBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		09C2AF502EF2B05B0079FBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterUtilityApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterUtilityApp";
+			};
+			name = Debug;
+		};
+		09C2AF512EF2B05B0079FBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WaterUtilityApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WaterUtilityApp";
+			};
+			name = Release;
+		};
+		09C2AF532EF2B05B0079FBFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterUtilityApp;
+			};
+			name = Debug;
+		};
+		09C2AF542EF2B05B0079FBFD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = name.HeloiseRugie.WaterUtilityAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WaterUtilityApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09C2AF232EF2B05A0079FBFD /* Build configuration list for PBXProject "WaterUtilityApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C2AF4A2EF2B05B0079FBFD /* Debug */,
+				09C2AF4B2EF2B05B0079FBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C2AF4C2EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C2AF4D2EF2B05B0079FBFD /* Debug */,
+				09C2AF4E2EF2B05B0079FBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C2AF4F2EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C2AF502EF2B05B0079FBFD /* Debug */,
+				09C2AF512EF2B05B0079FBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09C2AF522EF2B05B0079FBFD /* Build configuration list for PBXNativeTarget "WaterUtilityAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09C2AF532EF2B05B0079FBFD /* Debug */,
+				09C2AF542EF2B05B0079FBFD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09C2AF202EF2B05A0079FBFD /* Project object */;
+}
