@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct SettingsView: View {
+    @EnvironmentObject var router: AppRouter
     @State private var pushNotifications = true
     @State private var emailNotifications = true
     @State private var outageAlerts = true
@@ -84,7 +85,12 @@ struct SettingsView: View {
                         .padding(.horizontal)
                     }
                     
-                    Button(action: {}) {
+                    Button(action: {
+                        withAnimation {
+                            router.popToRoot()
+                            router.currentUser = nil
+                        }
+                    }) {
                         Text("Sign Out")
                             .font(.headline)
                             .foregroundColor(.red)

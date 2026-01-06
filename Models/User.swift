@@ -5,7 +5,7 @@ enum UserRole: String, CaseIterable {
     case admin
 }
 
-struct User: Identifiable {
+struct User: Identifiable, Hashable {
     let id: UUID
     var name: String
     var email: String

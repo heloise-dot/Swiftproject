@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AdminProfileView: View {
+    @EnvironmentObject var router: AppRouter
     @State private var user = User(
         name: "Admin User",
         email: "admin@waterutility.rw",
@@ -79,7 +80,12 @@ struct AdminProfileView: View {
                         }
                         .padding(.horizontal)
                         
-                        Button(action: {}) {
+                        Button(action: {
+                            withAnimation {
+                                router.popToRoot()
+                                router.currentUser = nil
+                            }
+                        }) {
                             Text("Sign Out")
                                 .font(.headline)
                                 .foregroundColor(.red)
@@ -101,5 +107,6 @@ struct AdminProfileView: View {
 
 #Preview {
     AdminProfileView()
+        .environmentObject(AppRouter())
 }
 
