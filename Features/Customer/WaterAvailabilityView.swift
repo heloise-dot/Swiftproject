@@ -62,7 +62,7 @@ struct WaterAvailabilityView: View {
                                 .background(Color.cardDark)
                                 .cornerRadius(16)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()

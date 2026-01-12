@@ -133,7 +133,7 @@ struct SendNotificationView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         .padding(.horizontal)
                         
                         PrimaryButton(title: "Send Notification") {
@@ -186,6 +186,7 @@ struct NotificationTypeButton: View {
             .background(isSelected ? colorForType(type).opacity(0.1) : Color.clear)
             .cornerRadius(12)
         }
+        .buttonStyle(.interactive)
     }
     
     private func iconForType(_ type: NotificationType) -> String {

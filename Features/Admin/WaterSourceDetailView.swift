@@ -108,7 +108,7 @@ struct WaterSourceDetailView: View {
                         .background(Color.cardDark)
                         .cornerRadius(16)
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.interactive)
                     
                     NavigationLink(destination: TankLevelView()) {
                         HStack {
@@ -125,7 +125,7 @@ struct WaterSourceDetailView: View {
                         .background(Color.cardDark)
                         .cornerRadius(16)
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.interactive)
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 40)

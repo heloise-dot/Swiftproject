@@ -34,7 +34,7 @@ struct OutageHistoryView: View {
                             NavigationLink(destination: OutageDetailView(outage: outage)) {
                                 HistoryOutageCard(outage: outage)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()

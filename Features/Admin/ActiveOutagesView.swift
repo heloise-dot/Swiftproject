@@ -33,7 +33,7 @@ struct ActiveOutagesView: View {
                             NavigationLink(destination: OutageDetailView(outage: outage)) {
                                 AdminOutageCard(outage: outage)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()
@@ -105,6 +105,7 @@ struct AdminOutageCard: View {
                     .background(isResolved ? Color.green : Color.primaryBlue)
                     .cornerRadius(12)
             }
+            .buttonStyle(.interactive)
             .disabled(isResolved)
         }
         .padding()

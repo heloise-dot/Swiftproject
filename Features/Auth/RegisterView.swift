@@ -72,11 +72,23 @@ struct RegisterView: View {
                     
                     // Logic Update: Navigate using the Path
                     PrimaryButton(title: "Create Account") {
-                        withAnimation {
-                            // First, clear the login stack so they can't go "back" to register
-                            router.path = NavigationPath()
-                            // Then, push the main view
-                            router.path.append("CustomerMain")
+                        Task {
+                            if password == confirmPassword {
+                                do {
+                                    let user = try await AuthenticationService.shared.signUp(name: name, email: email, phone: phone, area: selectedArea, password: password)
+                                    
+                                    await MainActor.run {
+                                        router.currentUser = user
+                                        router.path = NavigationPath()
+                                        router.navigate(to: .roleSelection)
+                                    }
+                                } catch {
+                                    print("Registration error: \(error.localizedDescription)")
+                                    // ideally show error to user
+                                }
+                            } else {
+                                // show password mismatch error
+                            }
                         }
                     }
                     .padding(.top, 8)
@@ -91,6 +103,7 @@ struct RegisterView: View {
                         .foregroundColor(.primaryBlue)
                         .fontWeight(.semibold)
                     }
+                    .buttonStyle(.interactive)
                     .font(.subheadline)
                     .padding(.top, 8)
                 }

@@ -58,7 +58,7 @@ struct UsageOverviewView: View {
                                     color: .blue
                                 )
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.weeklyUsage) {
                                 UsagePeriodCard(
@@ -68,7 +68,7 @@ struct UsageOverviewView: View {
                                     color: .green
                                 )
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.monthlyUsage) {
                                 UsagePeriodCard(
@@ -78,7 +78,7 @@ struct UsageOverviewView: View {
                                     color: .purple
                                 )
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                         .padding(.horizontal)
                         
@@ -104,7 +104,7 @@ struct UsageOverviewView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         .padding(.horizontal)
                     }
                     .padding(.top)

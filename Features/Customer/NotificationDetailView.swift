@@ -18,73 +18,97 @@ struct NotificationDetailView: View {
                     VStack(spacing: 16) {
                         Image(systemName: iconForType(notification.type))
                             .resizable()
-                            .frame(width: 70, height: 70)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 60, height: 60)
                             .foregroundColor(colorForType(notification.type))
+                            .padding(20)
+                            .background(colorForType(notification.type).opacity(0.1))
+                            .clipShape(Circle())
                         
-                        Text(notification.title)
-                            .font(.system(size: 32, weight: .bold))
-                            .foregroundColor(.textPrimary)
-                            .multilineTextAlignment(.center)
-                        
-                        StatusBadge(text: notification.type.rawValue, color: colorForType(notification.type))
+                        VStack(spacing: 8) {
+                            Text(notification.title)
+                                .font(.heading1)
+                                .foregroundColor(.textPrimary)
+                                .multilineTextAlignment(.center)
+                            
+                            HStack(spacing: 8) {
+                                StatusBadge(text: notification.type.rawValue, color: colorForType(notification.type))
+                                StatusBadge(text: notification.priority.rawValue, color: notification.priority.color)
+                            }
+                        }
                     }
                     .padding(.top, 20)
                     
                     VStack(alignment: .leading, spacing: 16) {
-                        Text("Message")
-                            .font(.headline)
-                            .foregroundColor(.textSecondary)
+                        SectionHeader(title: "Message")
                         
                         Text(notification.message)
-                            .font(.body)
+                            .font(.bodyLarge)
                             .foregroundColor(.textPrimary)
-                            .lineSpacing(4)
+                            .lineSpacing(6)
+                            .padding()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(Color.cardDark)
+                            .cornerRadius(16)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(Color.cardDark)
-                    .cornerRadius(16)
                     
-                    if let area = notification.area {
+                    VStack(spacing: 16) {
+                        if let area = notification.area {
+                            InfoCard(
+                                icon: "location.fill",
+                                title: "Affected Area",
+                                value: area,
+                                color: .blue
+                            )
+                        }
+                        
                         InfoCard(
-                            icon: "location.fill",
-                            title: "Area",
-                            value: area,
-                            color: .blue
+                            icon: "clock.fill",
+                            title: "Time Received",
+                            value: notification.timestamp.formatted(date: .abbreviated, time: .shortened),
+                            color: .purple
                         )
                     }
                     
-                    InfoCard(
-                        icon: "clock.fill",
-                        title: "Received",
-                        value: notification.timestamp.formatted(date: .abbreviated, time: .shortened),
-                        color: .purple
-                    )
-                    
-                    if notification.type == .outage {
-                        NavigationLink(destination: OutageListView()) {
-                            HStack {
-                                Text("View Related Outages")
-                                    .font(.headline)
-                                    .foregroundColor(.textPrimary)
-                                
-                                Spacer()
-                                
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.textSecondary)
+                    // MARK: Interactive Actions
+                    VStack(spacing: 16) {
+                        SectionHeader(title: "Actions")
+                        
+                        HStack(spacing: 12) {
+                            ActionButton(title: "Remind Me", icon: "bell.badge", color: .primaryBlue) {
+                                // Logic for reminder
                             }
-                            .padding()
-                            .background(Color.cardDark)
-                            .cornerRadius(16)
+                            
+                            ActionButton(title: "Report Issue", icon: "exclamationmark.bubble", color: .orange) {
+                                // Logic for reporting
+                            }
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        
+                        if notification.type == .outage {
+                            NavigationLink(destination: OutageListView()) {
+                                HStack {
+                                    Image(systemName: "map.fill")
+                                        .foregroundColor(.primaryBlue)
+                                    Text("View Outage Map")
+                                        .font(.headline)
+                                        .foregroundColor(.textPrimary)
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .foregroundColor(.textSecondary)
+                                }
+                                .padding()
+                                .background(Color.cardDark)
+                                .cornerRadius(16)
+                            }
+                            .buttonStyle(.interactive)
+                        }
                     }
                 }
                 .padding(.horizontal)
                 .padding(.bottom, 40)
             }
         }
-        .navigationTitle("Notification")
+        .navigationTitle("Details")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             if !isRead {
@@ -92,6 +116,33 @@ struct NotificationDetailView: View {
                     isRead = true
                 }
             }
+        }
+    }
+    
+    // Supporting View for Actions
+    struct ActionButton: View {
+        let title: String
+        let icon: String
+        let color: Color
+        let action: () -> Void
+        
+        var body: some View {
+            Button(action: action) {
+                VStack(spacing: 8) {
+                    Image(systemName: icon)
+                        .font(.title3)
+                        .foregroundColor(color)
+                    Text(title)
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.textPrimary)
+                }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 16)
+                .background(Color.cardDark)
+                .cornerRadius(12)
+            }
+            .buttonStyle(.interactive)
         }
     }
     

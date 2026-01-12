@@ -48,7 +48,7 @@ struct OutageListView: View {
                             NavigationLink(value: AppRoute.outageDetail(outage)) {
                                 OutageCardView(outage: outage)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()
@@ -76,6 +76,7 @@ struct FilterButton: View {
                 .background(isSelected ? Color.primaryBlue : Color.cardDark)
                 .cornerRadius(20)
         }
+        .buttonStyle(.interactive)
     }
 }
 

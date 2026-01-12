@@ -62,7 +62,7 @@ struct SystemOverviewView: View {
                                 color: .blue
                             ) {}
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         
                         NavigationLink(destination: PumpControlView()) {
                             InfoCard(
@@ -72,7 +72,7 @@ struct SystemOverviewView: View {
                                 color: .orange
                             ) {}
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         
                         NavigationLink(destination: TankLevelView()) {
                             InfoCard(
@@ -82,7 +82,7 @@ struct SystemOverviewView: View {
                                 color: .purple
                             ) {}
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                     }
                     .padding(.horizontal)
                     
@@ -104,7 +104,7 @@ struct SystemOverviewView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         
                         NavigationLink(destination: CreateOutageView()) {
                             HStack {
@@ -121,7 +121,7 @@ struct SystemOverviewView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         
                         NavigationLink(destination: SendNotificationView()) {
                             HStack {
@@ -138,7 +138,7 @@ struct SystemOverviewView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                     }
                     .padding(.horizontal)
                     .padding(.bottom, 40)

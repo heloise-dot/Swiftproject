@@ -1,5 +1,8 @@
 import SwiftUI
 
+// MARK: - Customer Home View
+// Production-ready home screen with clear information hierarchy
+// Optimized for quick access to critical water status information
 struct CustomerHomeView: View {
     @State private var areas: [Area] = [
         Area(name: "Kigali Central", status: .available, population: 50000, waterSource: "Main Reservoir"),
@@ -14,134 +17,192 @@ struct CustomerHomeView: View {
     ]
     
     var body: some View {
-        // NavigationStack removed to avoid nesting
-            ZStack {
-                Color.backgroundDark.ignoresSafeArea()
-                
-                ScrollView {
-                    VStack(spacing: 24) {
-                        VStack(alignment: .leading, spacing: 16) {
-                            SectionHeader(title: "Water Availability")
-                            
+        ZStack {
+            Color.backgroundDark.ignoresSafeArea()
+            
+            ScrollView {
+                VStack(spacing: .spacingXL) {
+                    // MARK: Water Availability Section
+                    // Primary information - water status by area
+                    VStack(alignment: .leading, spacing: .spacingMD) {
+                        SectionHeader(
+                            title: "Water Availability",
+                            subtitle: "Current status by service area"
+                        )
+                        
+                        LazyVStack(spacing: .spacingMD) {
                             ForEach(areas) { area in
                                 NavigationLink(value: AppRoute.areaStatus(area)) {
-                                    StatusCard(area: area.name, status: area.status.rawValue, color: statusColor(for: area.status))
+                                    StatusCard(
+                                        area: area.name,
+                                        status: area.status.rawValue,
+                                        color: statusColor(for: area.status),
+                                        subtitle: area.waterSource
+                                    )
                                 }
-                                .buttonStyle(PlainButtonStyle())
+                                .buttonStyle(.interactive)
                             }
                         }
-                        .padding(.top)
-                        
-                        VStack(alignment: .leading, spacing: 16) {
-                            HStack {
-                                Text("Recent Outages")
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.textPrimary)
-                                
-                                Spacer()
-                                
-                                NavigationLink(value: AppRoute.outageList) {
-                                    Text("View All")
-                                        .font(.subheadline)
-                                        .foregroundColor(.primaryBlue)
-                                }
-                            }
-                            .padding(.horizontal)
-                            
-                            ForEach(recentOutages.prefix(2)) { outage in
-                                NavigationLink(value: AppRoute.outageDetail(outage)) {
-                                    OutageRowView(outage: outage)
-                                }
-                                .buttonStyle(PlainButtonStyle())
-                            }
-                        }
-                        .padding(.horizontal)
-                        
-                        NavigationLink(value: AppRoute.waterAvailability) {
-                            HStack {
-                                VStack(alignment: .leading, spacing: 8) {
-                                    Text("Check Your Area")
-                                        .font(.headline)
+                        .padding(.horizontal, .spacingMD)
+                    }
+                    .padding(.top, .spacingMD)
+                    
+                    // MARK: Recent Outages Section
+                    // Critical alerts - prioritized for visibility
+                    if !recentOutages.isEmpty {
+                        VStack(alignment: .leading, spacing: .spacingMD) {
+                            HStack(alignment: .firstTextBaseline) {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text("Service Alerts")
+                                        .font(.heading2)
                                         .foregroundColor(.textPrimary)
                                     
-                                    Text("Search for water status in any area")
-                                        .font(.subheadline)
+                                    Text("Active outages and notifications")
+                                        .font(.bodySmall)
                                         .foregroundColor(.textSecondary)
                                 }
                                 
                                 Spacer()
                                 
+                                NavigationLink(value: AppRoute.outageList) {
+                                    Text("View All")
+                                        .font(.labelSmall)
+                                        .foregroundColor(.primaryBlue)
+                                }
+                            }
+                            .padding(.horizontal, .spacingMD)
+                            
+                            LazyVStack(spacing: .spacingMD) {
+                                ForEach(recentOutages.prefix(2)) { outage in
+                                    NavigationLink(value: AppRoute.outageDetail(outage)) {
+                                        OutageRowView(outage: outage)
+                                    }
+                                    .buttonStyle(.interactive)
+                                }
+                            }
+                            .padding(.horizontal, .spacingMD)
+                        }
+                    }
+                    
+                    // MARK: Quick Actions
+                    // Prominent call-to-action for area search
+                    NavigationLink(value: AppRoute.waterAvailability) {
+                        HStack(spacing: .spacingMD) {
+                            // Icon container
+                            ZStack {
+                                RoundedRectangle(cornerRadius: .radiusMD)
+                                    .fill(Color.primaryBlue.opacity(0.15))
+                                    .frame(width: 56, height: 56)
+                                
                                 Image(systemName: "magnifyingglass")
-                                    .font(.title2)
+                                    .font(.title3)
                                     .foregroundColor(.primaryBlue)
                             }
-                            .padding()
-                            .background(Color.cardDark)
-                            .cornerRadius(16)
+                            
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Check Your Area")
+                                    .font(.heading3)
+                                    .foregroundColor(.textPrimary)
+                                
+                                Text("Search water status by location")
+                                    .font(.bodySmall)
+                                    .foregroundColor(.textSecondary)
+                            }
+                            
+                            Spacer()
+                            
+                            Image(systemName: "chevron.right")
+                                .font(.bodyMedium)
+                                .foregroundColor(.textTertiary)
                         }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal)
+                        .padding(.spacingMD)
+                        .background(Color.cardDark)
+                        .cornerRadius(.radiusLG)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: .radiusLG)
+                                .stroke(Color.primaryBlue.opacity(0.2), lineWidth: 1.5)
+                        )
                     }
-                    .padding(.horizontal)
+                    .buttonStyle(.interactive)
+                    .padding(.horizontal, .spacingMD)
+                    .padding(.bottom, .spacingMD)
                 }
             }
-            .navigationTitle("Home")
-            .navigationBarTitleDisplayMode(.large)
+        }
+        .navigationTitle("Home")
+        .navigationBarTitleDisplayMode(.large)
     }
     
+    // MARK: Helper Methods
+    // Status color mapping for visual consistency
     private func statusColor(for status: WaterStatus) -> Color {
         switch status {
-        case .available: return .green
-        case .lowPressure: return .yellow
-        case .scheduledMaintenance: return .orange
-        case .outage: return .red
+        case .available: return .statusAvailable
+        case .lowPressure: return .statusLowPressure
+        case .scheduledMaintenance: return .statusMaintenance
+        case .outage: return .statusOutage
         }
     }
 }
 
+// MARK: - Outage Row Component
+// Compact outage display for list views
 struct OutageRowView: View {
     let outage: Outage
     
     var body: some View {
-        HStack(spacing: 16) {
-            VStack(alignment: .leading, spacing: 8) {
+        HStack(spacing: .spacingMD) {
+            // Severity indicator
+            RoundedRectangle(cornerRadius: 4)
+                .fill(severityColor(for: outage.severity))
+                .frame(width: 4)
+            
+            VStack(alignment: .leading, spacing: .spacingSM) {
                 Text(outage.area)
-                    .font(.headline)
+                    .font(.heading3)
                     .foregroundColor(.textPrimary)
                 
                 Text(outage.description)
-                    .font(.subheadline)
+                    .font(.bodyMedium)
                     .foregroundColor(.textSecondary)
                     .lineLimit(2)
                 
-                Text(outage.startTime, style: .relative)
-                    .font(.caption)
-                    .foregroundColor(.textSecondary)
+                HStack(spacing: .spacingMD) {
+                    Label("\(outage.affectedCustomers.formatted()) customers", systemImage: "person.3.fill")
+                        .font(.caption)
+                        .foregroundColor(.textTertiary)
+                    
+                    Text(outage.startTime, style: .relative)
+                        .font(.caption)
+                        .foregroundColor(.textTertiary)
+                }
             }
             
             Spacer()
             
             StatusBadge(text: outage.severity.rawValue, color: severityColor(for: outage.severity))
         }
-        .padding()
+        .padding(.spacingMD)
         .background(Color.cardDark)
-        .cornerRadius(16)
+        .cornerRadius(.radiusLG)
+        .overlay(
+            RoundedRectangle(cornerRadius: .radiusLG)
+                .stroke(Color.surfaceSecondary.opacity(0.3), lineWidth: 0.5)
+        )
     }
     
     private func severityColor(for severity: OutageSeverity) -> Color {
         switch severity {
-        case .minor: return .blue
-        case .moderate: return .yellow
-        case .major: return .orange
-        case .critical: return .red
+        case .minor: return .info
+        case .moderate: return .warning
+        case .major: return .statusMaintenance
+        case .critical: return .error
         }
     }
 }
 
 #Preview {
-    CustomerHomeView()
+    NavigationStack {
+        CustomerHomeView()
+    }
 }
-
-
-

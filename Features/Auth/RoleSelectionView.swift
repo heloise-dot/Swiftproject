@@ -57,6 +57,9 @@ struct RoleSelectionView: View {
                 // The "Continue" Button logic is updated here
                 if let role = selectedRole {
                     PrimaryButton(title: "Continue") {
+                        // Persist the role choice to the current user
+                        router.currentUser?.role = role
+                        
                         if role == .admin {
                             router.navigate(to: .adminMain)
                         } else {
@@ -120,7 +123,7 @@ struct RoleSelectionView: View {
                         .stroke(isSelected ? Color.primaryBlue : Color.clear, lineWidth: 2)
                 )
             }
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(.interactive)
         }
     }
 }

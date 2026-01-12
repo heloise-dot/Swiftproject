@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct CustomerProfileView: View {
+    @EnvironmentObject var router: AppRouter
     @State private var user = User(
         name: "John Doe",
         email: "john.doe@example.com",
@@ -39,22 +40,22 @@ struct CustomerProfileView: View {
                             NavigationLink(destination: EditProfileView(user: $user)) {
                                 ProfileRowView(icon: "person.fill", title: "Edit Profile", color: .blue)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.customerSettings) {
                                 ProfileRowView(icon: "gearshape.fill", title: "Settings", color: .gray)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.helpCenter) {
                                 ProfileRowView(icon: "questionmark.circle.fill", title: "Help Center", color: .green)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.contactSupport) {
                                 ProfileRowView(icon: "message.fill", title: "Contact Support", color: .orange)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                         .padding(.horizontal)
                         
@@ -81,6 +82,24 @@ struct CustomerProfileView: View {
                             )
                         }
                         .padding(.horizontal)
+                        
+                        Button(action: {
+                            withAnimation {
+                                router.popToRoot()
+                                router.currentUser = nil
+                            }
+                        }) {
+                            Text("Sign Out")
+                                .font(.headline)
+                                .foregroundColor(.red)
+                                .frame(maxWidth: .infinity)
+                                .padding()
+                                .background(Color.cardDark)
+                                .cornerRadius(16)
+                        }
+                        .buttonStyle(.interactive)
+                        .padding(.horizontal)
+                        .padding(.bottom, 40)
                     }
                     .padding(.top)
                 }

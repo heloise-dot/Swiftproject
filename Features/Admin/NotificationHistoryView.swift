@@ -33,7 +33,10 @@ struct NotificationHistoryView: View {
                 ScrollView {
                     LazyVStack(spacing: 16) {
                         ForEach(notifications) { notification in
-                            AdminNotificationCard(notification: notification)
+                            NavigationLink(value: AppRoute.notificationDetail(notification)) {
+                                AdminNotificationCard(notification: notification)
+                            }
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()

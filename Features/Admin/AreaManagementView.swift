@@ -43,7 +43,7 @@ struct AreaManagementView: View {
                             NavigationLink(value: AppRoute.editAreaStatus(area)) {
                                 AdminAreaRowView(area: area)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                     }
                     .padding()

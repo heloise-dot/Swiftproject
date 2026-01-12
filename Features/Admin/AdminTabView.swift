@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct AdminTabView: View {
+    @EnvironmentObject var router: AppRouter
     @State private var selectedTab = 0
     
     var body: some View {
@@ -17,17 +18,26 @@ struct AdminTabView: View {
                 }
                 .tag(1)
             
+            NavigationStack {
+                MapWaterFlowMapView()
+                    .environmentObject(router)
+            }
+            .tabItem {
+                Label("Map", systemImage: "map.fill")
+            }
+            .tag(2)
+            
             SendNotificationView()
                 .tabItem {
                     Label("Notifications", systemImage: "bell.fill")
                 }
-                .tag(2)
+                .tag(3)
             
             AdminProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.fill")
                 }
-                .tag(3)
+                .tag(4)
         }
         .accentColor(.primaryBlue)
     }

@@ -19,7 +19,7 @@ struct WaterSourceListView: View {
                         NavigationLink(value: AppRoute.waterSourceDetail(source)) {
                             WaterSourceRowView(source: source)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                     }
                 }
                 .padding()

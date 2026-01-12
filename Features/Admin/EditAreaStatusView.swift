@@ -148,6 +148,7 @@ struct StatusOptionButton: View {
             .background(isSelected ? statusColor(for: status).opacity(0.1) : Color.clear)
             .cornerRadius(12)
         }
+        .buttonStyle(.interactive)
     }
     
     private func statusColor(for status: WaterStatus) -> Color {

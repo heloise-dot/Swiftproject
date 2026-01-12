@@ -22,7 +22,7 @@ struct WaterTipsView: View {
                         NavigationLink(value: AppRoute.tipDetail(tip)) {
                             TipCardView(tip: tip, index: index)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                     }
                 }
                 .padding()

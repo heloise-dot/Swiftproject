@@ -64,7 +64,7 @@ struct AreaStatusView: View {
                             .background(Color.red.opacity(0.2))
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                     }
                     
                     Button(action: {
@@ -92,6 +92,7 @@ struct AreaStatusView: View {
                         .background(Color.cardDark)
                         .cornerRadius(16)
                     }
+                    .buttonStyle(.interactive)
                     .disabled(isRefreshing)
                 }
                 .padding(.horizontal)

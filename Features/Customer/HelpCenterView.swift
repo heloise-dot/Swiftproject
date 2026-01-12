@@ -67,7 +67,7 @@ struct HelpCenterView: View {
                         .background(Color.cardDark)
                         .cornerRadius(16)
                     }
-                    .buttonStyle(PlainButtonStyle())
+                    .buttonStyle(.interactive)
                     .padding(.horizontal)
                     .padding(.bottom, 40)
                 }
@@ -100,7 +100,7 @@ struct FAQCard: View {
                 }
                 .padding()
             }
-            .buttonStyle(PlainButtonStyle())
+            .buttonStyle(.interactive)
             
             if isExpanded {
                 Divider()

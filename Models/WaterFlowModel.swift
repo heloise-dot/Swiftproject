@@ -2,42 +2,6 @@ import Foundation
 import CoreLocation
 import SwiftUI
 
-enum SourceType: String, CaseIterable, Hashable {
-    case reservoir = "Reservoir"
-    case well = "Well"
-    case pump = "Pump Station"
-    case treatment = "Treatment Plant"
-}
-
-struct WaterSource: Identifiable, Hashable {
-    let id: UUID
-    var name: String
-    var type: SourceType
-    var capacity: Double
-    var currentLevel: Double
-    var isActive: Bool
-    var location: String
-    var lastMaintenance: Date
-    
-    init(id: UUID = UUID(), name: String, type: SourceType, capacity: Double, currentLevel: Double, isActive: Bool, location: String, lastMaintenance: Date = Date()) {
-        self.id = id
-        self.name = name
-        self.type = type
-        self.capacity = capacity
-        self.currentLevel = currentLevel
-        self.isActive = isActive
-        self.location = location
-        self.lastMaintenance = lastMaintenance
-    }
-    
-
-    var levelPercentage: Double {
-        (currentLevel / capacity) * 100
-    }
-}
-
-// MARK: - Merged Content from WaterFlowModel.swift
-
 // MARK: - Water Flow Status Enum
 enum WaterFlowStatus: String, CaseIterable, Hashable {
     case normal = "Normal"
@@ -145,14 +109,6 @@ struct MapWaterSource: Identifiable, Hashable {
     static func == (lhs: MapWaterSource, rhs: MapWaterSource) -> Bool {
         lhs.id == rhs.id
     }
-}
-
-// MARK: - Map Layer Enum
-enum MapLayer: String, CaseIterable, Hashable {
-    case all = "All"
-    case sources = "Water Sources"
-    case flow = "Flow Arrows"
-    case alerts = "Alerts"
 }
 
 // MARK: - Sample Data for Rwanda
@@ -309,5 +265,3 @@ struct WaterMapData {
         )
     ]
 }
-
-

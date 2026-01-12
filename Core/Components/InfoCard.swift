@@ -1,5 +1,8 @@
 import SwiftUI
 
+// MARK: - Info Card Component
+// Professional information card for displaying key metrics
+// Used throughout the app for consistent data presentation
 struct InfoCard: View {
     let icon: String
     let title: String
@@ -7,52 +10,51 @@ struct InfoCard: View {
     let color: Color
     var action: (() -> Void)? = nil
     
-    @State private var isPressed = false
     
     var body: some View {
         Button(action: {
-            withAnimation(.spring(response: 0.3)) {
-                isPressed = true
-            }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                withAnimation(.spring(response: 0.3)) {
-                    isPressed = false
-                }
-                action?()
-            }
+            action?()
         }) {
-            HStack(spacing: 16) {
+            HStack(spacing: .spacingMD) {
+                // Icon container - visually distinct
                 Image(systemName: icon)
-                    .font(.title2)
+                    .font(.title3)
                     .foregroundColor(color)
-                    .frame(width: 40, height: 40)
-                    .background(color.opacity(0.2))
-                    .cornerRadius(10)
+                    .frame(width: 44, height: 44) // Accessible touch target
+                    .background(color.opacity(0.15))
+                    .clipShape(RoundedRectangle(cornerRadius: .radiusSM))
                 
+                // Content
                 VStack(alignment: .leading, spacing: 4) {
                     Text(title)
-                        .font(.subheadline)
+                        .font(.labelSmall)
                         .foregroundColor(.textSecondary)
                     
                     Text(value)
-                        .font(.headline)
+                        .font(.heading3)
                         .foregroundColor(.textPrimary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                 }
                 
                 Spacer()
                 
+                // Navigation indicator
                 if action != nil {
                     Image(systemName: "chevron.right")
                         .font(.caption)
-                        .foregroundColor(.textSecondary)
+                        .foregroundColor(.textTertiary)
                 }
             }
-            .padding()
+            .padding(.spacingMD)
             .background(Color.cardDark)
-            .cornerRadius(16)
-            .scaleEffect(isPressed ? 0.95 : 1.0)
+            .cornerRadius(.radiusLG)
+            .overlay(
+                RoundedRectangle(cornerRadius: .radiusLG)
+                    .stroke(Color.surfaceSecondary.opacity(0.3), lineWidth: 0.5)
+            )
         }
-        .buttonStyle(PlainButtonStyle())
+        .buttonStyle(.interactive)
+        .disabled(action == nil)
     }
 }
-

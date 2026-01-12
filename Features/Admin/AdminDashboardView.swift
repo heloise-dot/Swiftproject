@@ -78,7 +78,7 @@ struct AdminDashboardView: View {
                                 NavigationLink(value: AppRoute.editAreaStatus(area)) {
                                     AdminAreaCard(area: area)
                                 }
-                                .buttonStyle(PlainButtonStyle())
+                                .buttonStyle(.interactive)
                             }
                         }
                         .padding(.horizontal)
@@ -98,7 +98,7 @@ struct AdminDashboardView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         .padding(.horizontal)
                         
                         NavigationLink(value: AppRoute.systemOverview) {
@@ -123,7 +123,7 @@ struct AdminDashboardView: View {
                             .background(Color.cardDark)
                             .cornerRadius(16)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .buttonStyle(.interactive)
                         .padding(.horizontal)
                         .padding(.bottom, 40)
                     }

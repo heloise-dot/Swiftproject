@@ -42,17 +42,17 @@ struct AdminProfileView: View {
                             NavigationLink(value: AppRoute.adminSettings) {
                                 ProfileRowView(icon: "gearshape.fill", title: "Settings", color: .gray)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.systemOverview) {
                                 ProfileRowView(icon: "chart.line.uptrend.xyaxis", title: "System Overview", color: .blue)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                             
                             NavigationLink(value: AppRoute.waterSources) {
                                 ProfileRowView(icon: "drop.fill", title: "Water Sources", color: .cyan)
                             }
-                            .buttonStyle(PlainButtonStyle())
+                            .buttonStyle(.interactive)
                         }
                         .padding(.horizontal)
                         
@@ -94,6 +94,7 @@ struct AdminProfileView: View {
                                 .background(Color.cardDark)
                                 .cornerRadius(16)
                         }
+                        .buttonStyle(.interactive)
                         .padding(.horizontal)
                         .padding(.bottom, 40)
                     }

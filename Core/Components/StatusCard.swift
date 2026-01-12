@@ -1,40 +1,50 @@
 import SwiftUI
 
+// MARK: - Status Card Component
+// Professional card component for displaying area status
+// Optimized for readability and visual hierarchy
 struct StatusCard: View {
     let area: String
     let status: String
     let color: Color
-
+    var subtitle: String? = nil
+    
     @State private var animate = false
-
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        VStack(alignment: .leading, spacing: .spacingMD) {
+            // Area name - primary information
             Text(area)
-                .font(.title3)
-                .bold()
+                .font(.heading3)
                 .foregroundColor(.textPrimary)
-
-            Text(status)
-                .font(.headline)
-                .padding(.vertical, 6)
-                .padding(.horizontal, 14)
-                .background(color.opacity(0.2))
-                .foregroundColor(color)
-                .cornerRadius(20)
+                .lineLimit(2)
+            
+            // Status badge
+            StatusBadge(text: status, color: color)
+            
+            // Optional subtitle (e.g., water source)
+            if let subtitle = subtitle {
+                Text(subtitle)
+                    .font(.bodySmall)
+                    .foregroundColor(.textSecondary)
+                    .lineLimit(1)
+            }
         }
-        .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(.spacingMD)
         .background(Color.cardDark)
-        .cornerRadius(18)
+        .cornerRadius(.radiusLG)
+        .overlay(
+            RoundedRectangle(cornerRadius: .radiusLG)
+                .stroke(color.opacity(0.1), lineWidth: 1)
+        )
+        .shadow(color: .black.opacity(0.1), radius: 4, x: 0, y: 2)
         .opacity(animate ? 1 : 0)
-        .offset(y: animate ? 0 : 20)
+        .offset(y: animate ? 0 : 8)
         .onAppear {
-            withAnimation(.easeOut(duration: 0.6)) {
+            withAnimation(.easeOut(duration: 0.4)) {
                 animate = true
             }
         }
     }
 }
-
-
-

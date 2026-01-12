@@ -2,11 +2,11 @@ import SwiftUI
 
 struct NotificationsView: View {
     @State private var notifications: [NotificationItem] = [
-        NotificationItem(title: "Water Restored", message: "Water service has been restored in your area", type: .update, timestamp: Date().addingTimeInterval(-300), area: "Kigali Central"),
-        NotificationItem(title: "Scheduled Maintenance", message: "Maintenance scheduled for tomorrow 8 AM - 12 PM", type: .maintenance, timestamp: Date().addingTimeInterval(-1800), area: "Gasabo"),
-        NotificationItem(title: "Water Saving Tip", message: "Fix leaks promptly to save water and reduce bills", type: .tip, timestamp: Date().addingTimeInterval(-3600)),
-        NotificationItem(title: "Outage Alert", message: "Water outage reported in Nyarugenge area", type: .outage, timestamp: Date().addingTimeInterval(-7200), area: "Nyarugenge"),
-        NotificationItem(title: "Emergency Update", message: "Emergency repair in progress", type: .emergency, timestamp: Date().addingTimeInterval(-10800), area: "Kicukiro")
+        NotificationItem(title: "Water Restored", message: "Water service has been restored in your area", type: .update, priority: .normal, timestamp: Date().addingTimeInterval(-300), area: "Kigali Central"),
+        NotificationItem(title: "Scheduled Maintenance", message: "Maintenance scheduled for tomorrow 8 AM - 12 PM", type: .maintenance, priority: .high, timestamp: Date().addingTimeInterval(-1800), area: "Gasabo"),
+        NotificationItem(title: "Water Saving Tip", message: "Fix leaks promptly to save water and reduce bills", type: .tip, priority: .low, timestamp: Date().addingTimeInterval(-3600)),
+        NotificationItem(title: "Outage Alert", message: "Water outage reported in Nyarugenge area", type: .outage, priority: .critical, timestamp: Date().addingTimeInterval(-7200), area: "Nyarugenge"),
+        NotificationItem(title: "Emergency Update", message: "Emergency repair in progress", type: .emergency, priority: .critical, timestamp: Date().addingTimeInterval(-10800), area: "Kicukiro")
     ]
     
     @State private var selectedFilter: NotificationType? = nil
@@ -73,7 +73,7 @@ struct NotificationsView: View {
                                     NavigationLink(value: AppRoute.notificationDetail(notification)) {
                                         NotificationRowView(notification: notification)
                                     }
-                                    .buttonStyle(PlainButtonStyle())
+                                    .buttonStyle(.interactive)
                                 }
                             }
                             .padding()

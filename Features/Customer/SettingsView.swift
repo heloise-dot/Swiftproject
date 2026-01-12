@@ -43,7 +43,7 @@ struct SettingsView: View {
                         SectionHeader(title: "Account")
                         
                         VStack(spacing: 12) {
-                            Button(action: {}) {
+                            NavigationLink(value: AppRoute.changePassword) {
                                 HStack {
                                     Text("Change Password")
                                         .foregroundColor(.textPrimary)
@@ -55,8 +55,9 @@ struct SettingsView: View {
                                 .background(Color.cardDark)
                                 .cornerRadius(12)
                             }
+                            .buttonStyle(.interactive)
                             
-                            Button(action: {}) {
+                            NavigationLink(value: AppRoute.privacyPolicy) {
                                 HStack {
                                     Text("Privacy Policy")
                                         .foregroundColor(.textPrimary)
@@ -68,8 +69,9 @@ struct SettingsView: View {
                                 .background(Color.cardDark)
                                 .cornerRadius(12)
                             }
+                            .buttonStyle(.interactive)
                             
-                            Button(action: {}) {
+                            NavigationLink(value: AppRoute.termsOfService) {
                                 HStack {
                                     Text("Terms of Service")
                                         .foregroundColor(.textPrimary)
@@ -81,6 +83,7 @@ struct SettingsView: View {
                                 .background(Color.cardDark)
                                 .cornerRadius(12)
                             }
+                            .buttonStyle(.interactive)
                         }
                         .padding(.horizontal)
                     }
